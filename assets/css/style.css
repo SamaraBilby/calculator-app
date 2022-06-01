@@ -1,0 +1,144 @@
+@import url(https://fonts.google.com/specimen/League+Spartan);
+*{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  
+
+}
+
+body {
+
+    background-color: hsl(268, 75%, 9%);
+    width: 100%;
+    height: 100%;
+    margin: 2em;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 0.5s;
+    
+    
+}
+.c-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 560px;
+    height: 5px;
+    margin-bottom: 25px;
+    
+    color: white;
+}
+
+.c-topo__title{
+    margin-left: 20px;
+}
+.c-topo__theme {
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+    
+}
+#c-toggle {
+    margin-left: -400px;
+    margin-right: 10px;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-radius: 50px;
+    background: hsl(268, 71%, 12%);
+    cursor: pointer;
+}
+#c-toggle .c-toggle__indicator {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: scale(0.7);
+    background: hsl(176, 100%, 44%);
+    transition: 0.5s;
+}
+.c-input {
+    color:hsl(52, 100%, 62%);
+    text-align: right;
+
+    background-color: hsl(268, 71%, 12%);
+    border-radius: 13px;
+    
+    padding: 0.5em;  
+}
+.c-input__previus {
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+    font-size: 16px;
+}
+.c-input__current {
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+    font-weight: 700;
+    font-size: 32px;
+}
+.c-button{
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    
+    background-color: hsl(268, 71%, 12%);
+    padding: 1em;
+    border-radius: 15px;
+}
+.c-button button {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    
+    height: 4em;
+    font-size: 22px;
+    color: hsl(52, 100%, 62%);
+    font-weight: bold;
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: inset 0 8px 60px hsl(285, 91%, 52%),
+                inset 0 8px 8px hsl(285, 91%, 52%),
+                inset 0 -4px 4px hsl(285, 91%, 52%);
+    cursor: pointer;
+}
+
+.c-button .c-button__del, .c-button .c-button__reset {
+    background-color: hsl(285, 91%, 52%);
+    color: hsl(0, 0, 100%);
+    box-shadow: inset 0 8px 60px hsl(281, 89%, 26%),
+                inset 0 8px 8px hsl(281, 89%, 26%),
+                inset 0 -4px 4px hsl(281, 89%, 26%);
+}
+.c-button .c-button__reset {
+    grid-column: span 2;
+    border-radius: 15px;
+    
+}
+.c-button .c-button__equal {
+    grid-column: span 2;
+    background:  hsl(176, 100%, 44%);
+    box-shadow: inset 0 8px 60px hsl(176, 80%, 12%),
+                inset 0 2px 8px hsl(176, 80%, 12%),
+                inset 0 -4px 4px hsl(176, 80%, 12%);
+    border-radius: 15px;
+    color: black;
+}
+#c-toggle.active .c-toggle__indicator {
+    left: 13px;
+}
