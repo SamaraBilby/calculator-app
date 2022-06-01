@@ -23,11 +23,11 @@ body {
     justify-content: center;
     align-items: center;
     
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     
     
 }
-.c-topo {
+#c-topo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,19 +37,22 @@ body {
     margin-bottom: 25px;
     
     color: white;
+
+    transition: 0.5s ease-in-out;
 }
 
-.c-topo__title{
+#c-topo .c-topo__title{
     margin-left: 20px;
+    font-size: 30px;
 }
-.c-topo__theme {
+#c-topo .c-topo__theme {
     position: relative;
     text-transform: uppercase;
     color: white;
     
 }
 #c-toggle {
-    margin-left: -400px;
+    margin-left: -365px;
     margin-right: 10px;
     position: relative;
     display: block;
@@ -58,6 +61,7 @@ body {
     border-radius: 50px;
     background: hsl(268, 71%, 12%);
     cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 #c-toggle .c-toggle__indicator {
     position: absolute;
@@ -68,16 +72,18 @@ body {
     border-radius: 50%;
     transform: scale(0.7);
     background: hsl(176, 100%, 44%);
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
 }
-.c-input {
+#c-input {
     color:hsl(52, 100%, 62%);
     text-align: right;
 
     background-color: hsl(268, 71%, 12%);
     border-radius: 13px;
     
-    padding: 0.5em;  
+    padding: 0.5em;
+    
+    transition: 0.5s ease-in-out;
 }
 .c-input__previus {
     padding: 0.2em;
@@ -92,7 +98,7 @@ body {
     font-weight: 700;
     font-size: 32px;
 }
-.c-button{
+#c-button{
     margin-top: 20px;
     margin-bottom: 0;
     display: grid;
@@ -102,8 +108,9 @@ body {
     background-color: hsl(268, 71%, 12%);
     padding: 1em;
     border-radius: 15px;
+     transition: 0.5s ease-in-out;
 }
-.c-button button {
+#c-button button {
     border: 1px solid transparent;
     border-radius: 15px;
     
@@ -112,33 +119,79 @@ body {
     color: hsl(52, 100%, 62%);
     font-weight: bold;
     background-color: hsl(281, 89%, 26%);
-    box-shadow: inset 0 8px 60px hsl(285, 91%, 52%),
-                inset 0 8px 8px hsl(285, 91%, 52%),
-                inset 0 -4px 4px hsl(285, 91%, 52%);
-    cursor: pointer;
-}
-
-.c-button .c-button__del, .c-button .c-button__reset {
-    background-color: hsl(285, 91%, 52%);
-    color: hsl(0, 0, 100%);
     box-shadow: inset 0 8px 60px hsl(281, 89%, 26%),
                 inset 0 8px 8px hsl(281, 89%, 26%),
-                inset 0 -4px 4px hsl(281, 89%, 26%);
+                inset 0 -4px 4px hsl(285, 91%, 52%);
+    cursor: pointer;
+
+    transition: 0.5s ease-in-out;
 }
-.c-button .c-button__reset {
+
+#c-button .c-button__del, #c-button .c-button__reset {
+    background-color: hsl(268, 47%, 21%);
+    color: white; 
+    box-shadow: inset 0 8px 60px hsl(268, 47%, 21%),
+                inset 0 10px 8px hsl(268, 47%, 21%),
+                inset 0 -4px 4px hsl(290, 70%, 36%);
+    transition: 0.5s ease-in-out;
+}
+#c-button .c-button__reset {
     grid-column: span 2;
     border-radius: 15px;
-    
+      
 }
-.c-button .c-button__equal {
+
+#c-button .c-button__equal {
     grid-column: span 2;
     background:  hsl(176, 100%, 44%);
-    box-shadow: inset 0 8px 60px hsl(176, 80%, 12%),
-                inset 0 2px 8px hsl(176, 80%, 12%),
+    box-shadow: inset 0 8px 60px hsl(176, 100%, 44%),
+                inset 0 2px 8px hsl(176, 100%, 44%),
                 inset 0 -4px 4px hsl(176, 80%, 12%);
     border-radius: 15px;
     color: black;
+    transition: 0.5s ease-in-out;
 }
 #c-toggle.active .c-toggle__indicator {
     left: 13px;
+    background: hsl(25, 98%, 40%);
+}
+#c-toggle.active {
+    background:hsl(0, 5%, 81%);
+}
+
+
+body.active {
+    background-color: hsl(0, 0%, 90%);
+}
+
+#c-topo.active .c-topo__title, #c-topo.active .c-topo__theme {
+    color:hsl(60, 10%, 19%);
+}
+#c-input.active {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+#c-button.active {
+    background: hsl(0, 5%, 81%);
+}
+#c-button.active button {
+    background-color:hsl(45, 7%, 89%);
+    box-shadow: inset 0 8px 60px hsl(45, 7%, 89%),
+                inset 0 8px 8px hsl(45, 7%, 89%),
+                inset 0 -4px 4px hsl(185, 42%, 15%);
+    color: hsl(60, 10%, 19%);
+}
+#c-button.active .c-button__del, #c-button.active .c-button__reset {
+    background-color: hsl(185, 42%, 37%);
+    color: white;
+    box-shadow: inset 0 8px 60px hsl(185, 58%, 25%),
+                inset 0 8px 8px hsl(185, 58%, 25%),
+                inset 0 -4px 4px hsl(185, 58%, 25%);
+}
+#c-button.active .c-button__equal{
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: inset 0 8px 60px hsl(25, 99%, 27%),
+                inset 0 8px 8px hsl(25, 99%, 27%),
+                inset 0 -4px 4px hsl(25, 99%, 27%);
+    color: black;
 }
