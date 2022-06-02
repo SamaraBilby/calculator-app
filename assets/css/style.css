@@ -176,6 +176,7 @@ body.active {
 }
 #c-button.active {
     background: hsl(0, 5%, 81%);
+    
 }
 #c-button.active button {
     background-color:hsl(45, 7%, 89%);
@@ -193,8 +194,27 @@ body.active {
 }
 #c-button.active .c-button__equal{
     background-color: hsl(25, 98%, 40%);
-    box-shadow: inset 0 8px 60px hsl(25, 99%, 27%),
-                inset 0 8px 8px hsl(25, 99%, 27%),
+    box-shadow: inset 0 8px 60px hsl(25, 98%, 40%),
+                inset 0 8px 8px hsl(25, 98%, 40%),
                 inset 0 -4px 4px hsl(25, 99%, 27%);
     color: black;
+}
+#c-button button:hover {
+    background-color: hsl(285, 91%, 52%);
+}
+#c-button .c-button__del:hover, #c-button .c-button__reset:hover {
+    background-color:hsl(290, 70%, 36%);
+}
+#c-button .c-button__equal:hover{
+    background-color:hsl(177, 92%, 70%);
+}
+#c-button.active button:hover {
+    background-color: hsl(35, 11%, 70%);
+    
+}
+#c-button.active .c-button__del:hover, #c-button.active .c-button__reset:hover {
+    background-color: hsl(185, 50%, 25%);
+}
+#c-button.active .c-button__equal:hover{
+    background-color: hsl(25, 99%, 52%)
 }
