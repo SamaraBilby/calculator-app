@@ -59,7 +59,7 @@
             operationValue = previous - current;
             this.updateScreen(operationValue, operation, current, previous);
             break;
-          case "*":
+          case "x":
             operationValue = previous * current;
             this.updateScreen(operationValue, operation, current, previous);
             break;

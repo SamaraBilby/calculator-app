@@ -14,7 +14,7 @@
 body {
 
     background-color: hsl(268, 75%, 9%);
-    width: 100%;
+    width: 95%;
     height: 100%;
     margin: 2em;
 
@@ -103,7 +103,8 @@ body {
     margin-bottom: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 15px;
+    gap: 10px;
+    
     
     background-color: hsl(268, 71%, 12%);
     padding: 1em;
@@ -114,7 +115,9 @@ body {
     border: 1px solid transparent;
     border-radius: 15px;
     
-    height: 4em;
+
+    
+    height: 3.5em;
     font-size: 22px;
     color: hsl(52, 100%, 62%);
     font-weight: bold;
