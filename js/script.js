@@ -89,10 +89,10 @@
         previous = null
       ) {
         if (operationValue === null) {
-          // Append number to current value
+         
           this.currentInputText.innerText += this.currentInput;
         } else {
-          // Check if value is zero, if is just add current value
+         
           if (previous === 0) {
             operationValue = current;
           }
@@ -104,7 +104,7 @@
     
       
       changeOperation(operation) {
-        const mathOperations = ["*", "-", "+", "/"];
+        const mathOperations = ["x", "-", "+", "/"];
     
         if (!mathOperations.includes(operation)) {
           return;
